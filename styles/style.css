@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --grey: #212121;
+  --grey-light: #2f2f2f;
+  --grey-dark:#171717;
+  --heading:#ffffff;
+  --text:#e2e2e2;
+  --accent: rgb(0, 106, 255);
+  --max-width: 800px;
+  --shadow: 0px 0px 10px rgba(0, 0, 0, 0.574);
+  --transition: all 0.5s cubic-bezier(.51,.92,.24,1.15);
+  --transition2: all 0.5s ease-in-out;
+}
+
+*, *::after, *::before {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--grey);
+}
+
+.heading, h1, h2, h3 {
+  font-family: "Comic Neue", serif;
+  font-weight: 900;
+}
+
+span {
+  color: var(--accent);
+  font-family: inherit;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.parent {
+  height: 100vh;
+  width: 100%;
+  background: var(--grey);
+  transition: var(--transition);
+  margin-left: 0px;
+  position: relative;
+  z-index: 10;
+}
+.parent .container {
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.parent .container .play-area {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 30px 40px;
+  background: var(--grey-light);
+  flex-direction: column;
+}
+.parent .container .play-area .options {
+  margin-top: 20px;
+}
+.parent.nav-active {
+  width: calc(100% - 300px);
+  margin-left: 300px;
+}
+.parent.nav-active .container {
+  max-width: calc(var(--max-width) - 250px);
+}
+.parent.nav-active #open {
+  display: none;
+}
+
+.icon {
+  height: 40px;
+  aspect-ratio: 1;
+  background: var(--grey-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.icon:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow);
+}
+.icon img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#open {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .parent.nav-active {
+    width: 100% !important;
+    margin-left: 0px !important;
+  }
+}/*# sourceMappingURL=style.css.map */

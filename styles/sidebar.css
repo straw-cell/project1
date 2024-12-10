@@ -1,0 +1,35 @@
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: var(--grey-dark);
+  position: fixed;
+  top: 0px;
+  padding: 20px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+  .sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: var(--grey-dark);
+    position: fixed;
+    top: 0px;
+    left: -300px;
+    padding: 20px;
+    z-index: 12 !important;
+  }
+  .sidebar.active {
+    left: 0px !important;
+  }
+  .black-area.active {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.648);
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+    position: fixed;
+    top: 0px;
+    z-index: 11 !important;
+  }
+}/*# sourceMappingURL=sidebar.css.map */

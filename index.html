@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
+</head>
+
+<body>
+
+
+<!-- sidebar -->
+
+
+<div class="sidebar-wrapper">
+    <div class="sidebar " id="sidebar">
+
+        <div class="icon" id="close" onclick="CloseNav()">
+            <img src="./assets/close.png" alt="close icon">
+        </div>
+    
+    
+        <h2 class="logo">
+            <span>Quiz</span> App
+        </h2>
+     
+    </div>
+    <div id="black-area" class="black-area " onclick="CloseNav()"></div>
+</div>
+
+
+<!-- play area -->
+    <div class=" parent" id="parent">
+
+        <div class="icon" id="open"  onclick="OpenNav()">
+            <img src="./assets/menu.png" alt="menu icon">
+        </div>
+        <div class="container">
+
+            <div class="play-area">
+                <h1 class="question" id="question">
+                    this is a sample question ?
+                </h1>
+
+                <div class="options">
+                    <div class="op1 op" id="option1"> this is an sample option </div>
+                    <div class="op2 op" id="option2"> this is an sample option </div>
+                    <div class="op3 op" id="option3"> this is an sample option </div>
+                    <div class="op4 op" id="option4"> this is an sample option </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="/logic.js"></script>
+    <script src="/data.js"></script>
+
+
+</body>
+
+</html>
