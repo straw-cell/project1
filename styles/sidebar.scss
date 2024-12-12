@@ -8,6 +8,31 @@
     top: 0px;
     padding: 20px;
     z-index: 1;
+
+    .question-list{
+        padding-top: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .question-tab{
+            padding: 10px 10px;
+            border-radius: 10px;
+            background: var(--grey);
+            transition: var(--transition);
+
+            &.active{
+                background: var(--accent);
+            }
+        }
+        
+
+
+    }
+
+
+
 }
 
 
@@ -31,7 +56,16 @@
             left: 0px !important;
 
         }
+
+
+
+
+
     }
+
+
+
+
 
     .black-area.active{
         width: 100%;
