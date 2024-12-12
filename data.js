@@ -100,4 +100,7 @@ const data = [
         tag: "JavaScript"
     }
 ];
-console.log(data[0].question)
+
+
+
+export {data}

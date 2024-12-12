@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/sidebar.css">
-</head>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/sidebar.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- sidebar -->
 
-
-<!-- sidebar -->
-
-
-<div class="sidebar-wrapper">
-    <div class="sidebar " id="sidebar">
-
-        <div class="icon" id="close" onclick="CloseNav()">
-            <img src="./assets/close.png" alt="close icon">
+    <div class="sidebar-wrapper">
+      <div class="sidebar" id="sidebar">
+        <div class="icon" id="close">
+          <img src="./assets/close.png" alt="close icon" />
         </div>
-    
-    
-        <h2 class="logo">
-            <span>Quiz</span> App
-        </h2>
-     
+
+        <h2 class="logo"><span>Quiz</span> App</h2>
+
+        <div class="question-list" id="question-list"></div>
+      </div>
+      <div id="black-area" class="black-area"></div>
     </div>
-    <div id="black-area" class="black-area " onclick="CloseNav()"></div>
-</div>
+
+    <!-- play area -->
+    <div class="parent" id="parent">
+      <div class="icon" id="open">
+        <img src="./assets/menu.png" alt="menu icon" />
+      </div>
+      <div class="container">
+        <div class="play-area">
+
+          <div class="progress">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
 
 
-<!-- play area -->
-    <div class=" parent" id="parent">
+          <h1 class="question" id="question">this is a sample question ?</h1>
 
-        <div class="icon" id="open"  onclick="OpenNav()">
-            <img src="./assets/menu.png" alt="menu icon">
-        </div>
-        <div class="container">
+          <div class="options">
+            <div class="op1 op" id="optionBox1">
+              <span>option 1 : </span>
+              <p id="option1"></p>
+            </div>
+            <div class="op2 op" >
+              <span>option 2 : </span>
+              <p id="option2"></p>
+            </div>
+            <div class="op3 op" >
+              <span>option 3 : </span>
+              <p id="option3"></p>
+            </div>
+            <div class="op4 op" >
+              <span>option 4 : </span>
+              <p id="option4"></p>
+            </div>
+          </div>
 
-            <div class="play-area">
-                <h1 class="question" id="question">
-                    this is a sample question ?
-                </h1>
-
-                <div class="options">
-                    <div class="op1 op" id="option1"> this is an sample option </div>
-                    <div class="op2 op" id="option2"> this is an sample option </div>
-                    <div class="op3 op" id="option3"> this is an sample option </div>
-                    <div class="op4 op" id="option4"> this is an sample option </div>
-                </div>
+          <div class="btn-row">
+            <div class="left">
+              <div id="back " class=""> &lt; </div>
+              <div id="forward"> &gt;</div>
             </div>
 
+            <div class="right">
+              <div id="submit">Submit</div>
+              <div id="showans">Show ANS</div>
+            </div>
+          </div>
+
+
+    
 
 
         </div>
+      </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="/logic.js"></script>
-    <script src="/data.js"></script>
-
-
-</body>
-
+    <script type="module" src="/data.js"></script>
+    <script type="module" src="/logic.js" defer></script>
+  </body>
 </html>

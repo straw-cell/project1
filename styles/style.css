@@ -2,17 +2,19 @@
 :root {
   --grey: #212121;
   --grey-light: #2f2f2f;
-  --grey-dark:#171717;
-  --heading:#ffffff;
-  --text:#e2e2e2;
+  --grey-dark: #171717;
+  --heading: #ffffff;
+  --text: #e2e2e2;
   --accent: rgb(0, 106, 255);
   --max-width: 800px;
   --shadow: 0px 0px 10px rgba(0, 0, 0, 0.574);
-  --transition: all 0.5s cubic-bezier(.51,.92,.24,1.15);
+  --transition: all 0.5s cubic-bezier(.51, .92, .24, 1.15);
   --transition2: all 0.5s ease-in-out;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
@@ -24,7 +26,10 @@ body {
   background: var(--grey);
 }
 
-.heading, h1, h2, h3 {
+.heading,
+h1,
+h2,
+h3 {
   font-family: "Comic Neue", serif;
   font-weight: 900;
 }
@@ -35,7 +40,7 @@ span {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .parent {
@@ -68,8 +73,74 @@ h1 {
   background: var(--grey-light);
   flex-direction: column;
 }
+.parent .container .play-area .progress {
+  height: 10px;
+  border-radius: 100px;
+  width: 100%;
+  background: var(--grey-dark);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.parent .container .play-area .progress .progress-bar {
+  height: 10px;
+  border-radius: 100px;
+  width: 10%;
+  background: var(--accent);
+}
 .parent .container .play-area .options {
   margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.parent .container .play-area .options .op {
+  width: 100%;
+  padding: 10px 20px;
+  background: var(--grey);
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  transition: var(--transition);
+  outline: 0px solid var(--accent);
+  cursor: pointer;
+}
+.parent .container .play-area .options .op.active {
+  background: var(--accent);
+}
+.parent .container .play-area .options .op.active span {
+  color: rgba(255, 255, 255, 0.55);
+}
+.parent .container .play-area .options .op:hover {
+  transform: translateY(-2px) scale(1.01);
+  outline: 2px solid var(--accent);
+}
+.parent .container .play-area .options .op span {
+  color: rgba(255, 255, 255, 0.155);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.parent .container .play-area .btn-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.parent .container .play-area .btn-row .left, .parent .container .play-area .btn-row .right {
+  display: flex;
+  gap: 10px;
+}
+.parent .container .play-area .btn-row .left div, .parent .container .play-area .btn-row .right div {
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.284);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.parent .container .play-area .btn-row .left div:hover, .parent .container .play-area .btn-row .right div:hover {
+  background: var(--accent);
 }
 .parent.nav-active {
   width: calc(100% - 300px);

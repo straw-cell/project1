@@ -7,6 +7,22 @@
   padding: 20px;
   z-index: 1;
 }
+.sidebar .question-list {
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidebar .question-list .question-tab {
+  padding: 10px 10px;
+  border-radius: 10px;
+  background: var(--grey);
+  transition: var(--transition);
+}
+.sidebar .question-list .question-tab.active {
+  background: var(--accent);
+}
 
 @media only screen and (max-width: 1000px) {
   .sidebar {
