@@ -137,24 +137,16 @@ console.log(data[0].answer);
 let back = document.getElementById("back");
 let front = document.getElementById("forward");
 
-function goback(){
- 
+back.addEventListener("click", function (){
+
   currentQuestion = currentQuestion - 1;
-   updateQuestion(currentQuestion);
-}
+  updateQuestion(currentQuestion);
 
-back.addEventListener("click", function () {
- 
-  goback()
- 
-} )
+})
 
-function goforward(){
+front.addEventListener("click", function (){
+
   currentQuestion = currentQuestion + 1;
-   updateQuestion(currentQuestion);
-}
+  updateQuestion(currentQuestion);
 
-front.addEventListener("click", function () {
-  goforward()
- 
-} )
+})
